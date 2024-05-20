@@ -1,0 +1,239 @@
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <title>Form Validation</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script src = "./sripts/script.mjs"></script>
+  </head>
+
+  <body>
+    <h1>Form Validation</h1>
+    <div>
+      The <code>required</code> attribute defines fields that must be filled out
+      before a form can be submitted.
+    </div>
+
+    <br />
+
+    <div id="app">
+       <p>Try submitting this form without any input.</p>
+      <form id="myForm">
+
+        <div>
+            The <code>min</code> and <code>max</code> attributes define the value that
+            an input must adhere to in order to be considered valid.
+          </div>
+        <input type="inputOne" required /> <br>
+        <input type="text" required />
+        <input id = "submitBtn" type = "submit"/>
+        <input id = "password" type = "password"/>
+
+    <button type="submit">Submit</button> --> 
+     <!-- // </form>
+    //</div>  -->
+    <!-- <div>
+        The <code>pattern</code> attribute provides powerful tools for matching an
+        input to a desired format using regular expressions.
+      </div>
+  
+      <br />
+  
+      <div id="app">
+        <p>Try submitting this form with input of varying values.</p>
+        <form id="myForm">
+          <input
+            type="text"
+            pattern="^[a-zA-Z]*$"
+            title="One word with no numbers or special characters."
+            required
+          />
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+  
+
+    <script src="src/index.js"></script>
+  </body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <form action="" name="myForm" method="POST">
+      <input
+        type="text"
+        name="Name"
+        placeholder="Enter a Username"
+        pattern="^[a-zA-Z]+"
+        title="Please start your username with a letter from a-z."
+        required
+      />
+      <input
+        type="text"
+        name="Email"
+        placeholder="Email with regEx"
+        title="Please start your email with a letter and follow the format name@mail.com"
+        pattern="^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$"
+        required
+      />
+      <input
+        type="email"
+        name="EmailTwo"
+        placeholder='Email with type="email"'
+        required
+      />
+      <input
+        type="tel"
+        name="Zip"
+        min="5"
+        maxlength="5"
+        id="ZipID"
+        placeholder="Enter Zip Code"
+        pattern="\d{5}"
+        title="Five-digit Zip Code"
+        required
+      />
+      <input
+        type="date"
+        id="date"
+        value="2024-12-31"
+        min="1910-01-01"
+        max="2024-12-31"
+        placeholder="Date of Birth"
+        required
+      />
+      <select name="Country" id="CountryId" required>
+        <option value="">Select Country</option>
+        <option value="USA">USA</option>
+        <option value="UK">UK</option>
+        <option value="UAE">UAE</option>
+      </select>
+      <input
+        type="password"
+        name="password"
+        id="password"
+        placeholder="Password"
+        required
+      />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Form Validation with JavaScript</title>
+    <link rel="stylesheet" href="./scripts/homework.mjs" />
+    <script src="src/index.js"></script>
+  </head>
+  <body>
+    <form
+      action="javascript: alert('Success!');"
+      name="myForm"
+      method="POST"
+      id="form"
+    >
+      <input type="text" name="name" placeholder="Name" />
+      <input type="text" name="email" placeholder="Email" />
+      <input type="text" name="zip" placeholder="Zip Code" />
+      <select name="country">
+        <option value="">Select Country</option>
+        <option value="USA">USA</option>
+        <option value="UK">UK</option>
+        <option value="UAE">UAE</option>
+      </select>
+      <input type="password" name="password" placeholder="Password" />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
+-->
+
+ <!DOCTYPE html>
+<html>
+  <head>
+    <title>Form Validation Practice</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+  Font Awesome for Icons 
+    <script
+      src="https://kit.fontawesome.com/d8f052c6cf.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="./scripts/homework.mjs"></script>
+  </head>
+  <body>
+    <!-- Container for entire form. -->
+    <div class="form-container">
+      <!-- Registration Side -->
+      <div>
+        <h1>Register</h1>
+        <p>Please provide your information below.</p>
+
+        <!-- Registration Form -->
+        <form id="registration">
+          <input name="username" type="text" placeholder="Username"minlength="3" required />
+          <span class="input-icon"><i class="fa-solid fa-user"></i></span><br />
+
+          <input name="email" type="text" placeholder="Email" required />
+          <span class="input-icon"><i class="fa-solid fa-envelope"></i></span
+          ><br />
+
+          <input name="password" type="text" placeholder="Password" minlength="6" required />
+          <span class="input-icon"><i class="fa-solid fa-key"></i></span><br />
+
+          <input
+            name="passwordCheck"
+            type="text"
+            placeholder="Repeat Password"
+          />
+          <span class="input-icon"><i class="fa-solid fa-key"></i></span
+          ><br /><br />
+
+          <div class="flex-row">
+            <input name="terms" type="checkbox" required />
+            <label for="terms"
+              >I agree to the&nbsp;<a href="#">Terms of Use</a>.</label
+            >
+            <input type="submit" value="Register" />
+          </div>
+        </form>
+      </div>
+
+      <!-- Login Side -->
+      <div>
+        <h1>Login</h1>
+        <p>Login using your account information.</p>
+
+        <!-- Login Form -->
+        <form id="login" style="border-bottom: 1px solid lightgray;">
+          <input name="username" type="text" placeholder="Username" required />
+          <span class="input-icon"><i class="fa-solid fa-user"></i></span><br />
+
+          <input name="password" type="text" placeholder="Password" required />
+          <span class="input-icon"><i class="fa-solid fa-key"></i></span
+          ><br /><br />
+
+          <div class="flex-row">
+            <input name="persist" type="checkbox" />
+            <label for="persist">Keep me logged in.</label>
+            <input type="submit" value="Login" />
+          </div>
+          <br /><br />
+        </form>
+
+        <p>Forgot your <a href="#">Username</a> or <a href="#">Password?</a></p>
+      </div>
+    </div>
+
+    <!-- Error Display Container -->
+    <div id="errorDisplay"></div>
+  </body>
+</html>
